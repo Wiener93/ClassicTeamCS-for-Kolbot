@@ -3,21 +3,21 @@
 1. Put ClassicTeamCS.js and ClassicTeamTaxi.js in your ...\d2bot-with-kolbot-master\d2bs\kolbot\libs\bots folder.
 
 2. Copy& paste the following right under line 292 (// Script specific) in Config.js in your ...\d2bot-with-kolbot-master\d2bs\kolbot\libs\common directory:
-```
+
 	ClassicTeamTaxi: {  
-      Diablo: 0,  
-      SealOrder: [1, 2, 3],  
-      PreAttack: [0, 0, 0],  
-	  SealFight: true  
-	},  
+		Diablo: 0,  
+		SealOrder: [1, 2, 3],  
+ 		PreAttack: [0, 0, 0],  
+		SealFight: true  
+		},  
 	ClassicTeamCS: {  
-      Leader: "",  
-      Diablo: 0,  
-      BO: false,  
-      Ranged: false,   
-      PreAttack: [0, 0, 0]  
-	},  
-  ```
+		Leader: "",  
+		Diablo: 0,  
+		BO: false,  
+		Ranged: false,   
+		PreAttack: [0, 0, 0]  
+		},  
+
 3. Add this in your Sorcs Character Config:
   
   Scripts.ClassicTeamTaxi = true;   
