@@ -14,9 +14,7 @@
       Leader: "",  
       Diablo: 0,  
       BO: false,  
-      Leech: false,  
-      Ranged: false,  
-      SealPrecast: false,  
+      Ranged: false,   
       PreAttack: [0, 0, 0]  
 	},  
   
@@ -32,6 +30,7 @@
 
   Scripts.ClassicTeamCS = true;   
 	Config.ClassicTeamCS.Diablo = 0; // -1= go to town during diablo, 0= kill to death, 1= get exp shrine and kill diablo  
+	Config.ClassicTeamCS.BO = false; // true = don't enter seals after boing at river, false = normal character that fights
 	Config.ClassicTeamCS.Ranged = false; // true = ranged character, false = melee character   
 	Config.ClassicTeamCS.PreAttack = [3, 3, 3]; // preattack count at each seal [/vizier/, /seis/, /infector/]  
     
