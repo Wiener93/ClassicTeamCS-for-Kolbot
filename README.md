@@ -34,4 +34,3 @@
 	Config.ClassicTeamCS.Ranged = false; // true = ranged character, false = melee character   
 	Config.ClassicTeamCS.PreAttack = [3, 3, 3]; // preattack count at each seal [/vizier/, /seis/, /infector/]  
     
-5. For Barb use the regular BattleOrders Script and change the waypoint from 35 to 104.
