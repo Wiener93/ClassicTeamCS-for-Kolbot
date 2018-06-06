@@ -20,17 +20,18 @@
 
 3. Add this in your Sorcs Character Config:
   
-  Scripts.ClassicTeamTaxi = true;   
-	Config.ClassicTeamTaxi.Diablo = 0; // -1 = get exp shrine no dia, 0 = no exp shrine and kill dia, 1 = get exp shrine and dia  
-	Config.ClassicTeamTaxi.SealOrder = [1, 2, 3]; // order of seals 1: vizier, 2: seis, 3: infector  
-	Config.ClassicTeamTaxi.PreAttack = [1, 1, 1]; // preattack count at each seal[/vizier/, /seis/, /infector/]   
-	Config.ClassicTeamTaxi.SealFight = true; //true= sorc will fight at seals. false= go to town and wait for pala to clear  
+	Scripts.ClassicTeamTaxi = true;   
+		Config.ClassicTeamTaxi.Diablo = 0; // -1 = get ES no dia, 0 = no ES and kill dia, 1 = get ES and dia  
+		Config.ClassicTeamTaxi.SealOrder = [1, 2, 3]; // order of seals 1: vizier, 2: seis, 3: infector  
+		Config.ClassicTeamTaxi.PreAttack = [1, 1, 1]; // preattack count at each seal[/vizier/, /seis/, /infector/]   
+		Config.ClassicTeamTaxi.SealFight = true; //true= sorc will fight at seals. false= go to town and wait for pala to clear  
 
 4. Add this to the Char Configs of the rest of your teams chars:
 
-  Scripts.ClassicTeamCS = true;   
-	Config.ClassicTeamCS.Diablo = 0; // -1= go to town during diablo, 0= kill to death, 1= get exp shrine and kill diablo  
-	Config.ClassicTeamCS.BO = false; // true = don't enter seals after boing at river, false = normal character that fights
-	Config.ClassicTeamCS.Ranged = false; // true = ranged character, false = melee character   
-	Config.ClassicTeamCS.PreAttack = [3, 3, 3]; // preattack count at each seal [/vizier/, /seis/, /infector/]  
+	Scripts.ClassicTeamCS = true;   
+		Config.ClassicTeamCS.Diablo = 0; // -1= go to town during diablo, 0= kill to death, 1= get exp shrine and kill diablo  
+		Config.ClassicTeamCS.BO = false; // true = don't enter seals after boing at river, false = normal character that fights
+		Config.ClassicTeamCS.Ranged = false; // true = ranged character, false = melee character   
+		Config.ClassicTeamCS.PreAttack = [3, 3, 3]; // preattack count at each seal [/vizier/, /seis/, /infector/]  
     
+Use RAW format to copy& paste
