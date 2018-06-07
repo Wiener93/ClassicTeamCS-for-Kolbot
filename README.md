@@ -34,4 +34,6 @@
 		Config.ClassicTeamCS.Ranged = false; // true = ranged character, false = melee character   
 		Config.ClassicTeamCS.PreAttack = [3, 3, 3]; // preattack count at each seal [/vizier/, /seis/, /infector/]  
     
+Set the Diablo killer/ Main Char as leader.
+
 Use RAW format to copy& paste
