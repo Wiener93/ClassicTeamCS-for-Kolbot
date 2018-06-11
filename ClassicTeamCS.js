@@ -94,16 +94,6 @@ function ClassicTeamCS() {
     };
 
 	
-	this.BO = function () {
-		var sorc = getParty(this.taxi);
-        Precast.doPrecast(true);
-
-        while (sorc && sorc.area !== 108 && (!me.getState(32) || (me.classid === 4) || getUnit(0, this.taxi))) {
-            delay(250);
-            
-        }
-		Precast.doPrecast(true);
-	}
     this.doNext = function () {
         var portal;
 
@@ -458,9 +448,9 @@ function ClassicTeamCS() {
         delay(100);
         this.setTaxi();
         this.doNext();
-		if (Config.ClassicTeamCS.BO) {
-			print ("BO");
+		if (Config.ClassicTeamCS.BO && (!me.getState(32))) {
 			return;
+			
 		}
         if (getTickCount() - time > 10000) {
             time = getTickCount();
