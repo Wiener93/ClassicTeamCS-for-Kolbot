@@ -214,7 +214,7 @@ function ClassicTeamTaxi() {
 				delay(5);
 			}
 			Pather.usePortal(108, null);
-			this.slayBoss(3060, 0, 30, Config.AutoCS.Diablo);
+			this.slayBoss(3060, 0, 30, Config.ClassicTeamTaxi.Diablo);
 			Town.goToTown(4);
 			Town.doChores();
 			
