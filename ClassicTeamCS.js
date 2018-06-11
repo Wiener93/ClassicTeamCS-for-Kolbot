@@ -93,6 +93,17 @@ function ClassicTeamCS() {
         return current;
     };
 
+	
+	this.BO = function () {
+		var sorc = getParty(this.taxi);
+        Precast.doPrecast(true);
+
+        while (sorc && sorc.area !== 108 && (!me.getState(32) || (me.classid === 4) || getUnit(0, this.taxi))) {
+            delay(250);
+            
+        }
+		Precast.doPrecast(true);
+	}
     this.doNext = function () {
         var portal;
 
@@ -106,9 +117,7 @@ function ClassicTeamCS() {
             return;
         }
 
-        if (Config.ClassicTeamCS.BO && portal.area !== 107) {
-            return;
-        }
+
 
         if (!Pather.usePortal(null, null, portal)) {
             return;
@@ -247,11 +256,17 @@ function ClassicTeamCS() {
 				}
 				portal = Pather.getPortal(null, this.taxi);
 				Pather.usePortal(null, null, portal); // Take portal to area
-				Misc.scanShrines(15)  // find shrine but do not take it
+				Misc.scanShrines(15);  // find shrine
 				Pather.usePortal(1, null); // Take portal home
 				Pickit.pickItems();
-				
+				while (sorc && sorc.area !== 103) {
+					delay(1000);
+					if (sorc && sorc.area === 108) {
+						break;
+					}
+				}
 				Town.goToTown(4);
+				
 				Pather.usePortal(108, me.name);
 				this.slayBoss(3060, 0, 30, Config.ClassicTeamCS.Diablo);
                 while (getTickCount() - pick < 1500) {
@@ -443,7 +458,10 @@ function ClassicTeamCS() {
         delay(100);
         this.setTaxi();
         this.doNext();
-
+		if (Config.ClassicTeamCS.BO) {
+			print ("BO");
+			return;
+		}
         if (getTickCount() - time > 10000) {
             time = getTickCount();
 
