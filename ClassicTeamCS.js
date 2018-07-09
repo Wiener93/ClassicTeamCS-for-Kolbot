@@ -121,7 +121,7 @@ function ClassicTeamCS() {
             print("precast");
 			if (Config.ClassicTeamCS.BO) {
 				var pal = getParty(leader);
-				while (pal && pal.area !== 1) {
+				while (pal && pal.area !== 107) {
 					delay(250);
 				}
 				Pather.useWaypoint(103);
