@@ -239,7 +239,7 @@ function ClassicTeamCS() {
 				}
 				this.slayBoss(3060, 0, 30, Config.ClassicTeamCS.Diablo);
                 pick = getTickCount();
-				
+				Pickit.pickItems();
                 while (getTickCount() - pick < 1500) {
                     Pickit.pickItems();
                     delay(me.ping + 100);
@@ -254,6 +254,7 @@ function ClassicTeamCS() {
 				Town.goToTown(1);
 				Pickit.pickItems();
 				Town.move("portalspot");
+				var portal;
 				var sorc = getParty(this.taxi);
 				while (sorc && sorc.area !== 1) {
 					delay(250);
@@ -273,6 +274,7 @@ function ClassicTeamCS() {
 				
 				Pather.usePortal(108, me.name);
 				this.slayBoss(3060, 0, 30, Config.ClassicTeamCS.Diablo);
+				Pickit.pickItems();
                 while (getTickCount() - pick < 1500) {
                     Pickit.pickItems();
                     delay(me.ping + 100);
