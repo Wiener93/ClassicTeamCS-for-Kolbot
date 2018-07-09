@@ -274,6 +274,7 @@ function ClassicTeamCS() {
 				
 				Pather.usePortal(108, me.name);
 				this.slayBoss(3060, 0, 30, Config.ClassicTeamCS.Diablo);
+				delay(500);
 				Pickit.pickItems();
                 while (getTickCount() - pick < 1500) {
                     Pickit.pickItems();
