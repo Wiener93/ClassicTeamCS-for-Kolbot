@@ -33,6 +33,10 @@ function ClassicTeamTaxi() {
 		Precast.doPrecast(true);
 		this.getShrine();
 		Town.goToTown(1);
+		var pal = getParty(leader);
+		while (pal && pal.area !== 1) {
+			delay(200);
+		}
 		Town.goToTown(4);
 		Town.move("portalspot");
 	};
@@ -148,6 +152,8 @@ function ClassicTeamTaxi() {
 		for (var i = 4; i > 1; i -= 1) {
 			if (Misc.getShrinesInArea(i, 15, false)) { // find shrine but do not take it
 			say("Found Shrine");
+
+			
 			break;
 			}
 			
