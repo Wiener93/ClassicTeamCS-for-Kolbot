@@ -124,8 +124,8 @@ function ClassicTeamCS() {
 				while (pal && pal.area !== 107) {
 					delay(250);
 				}
+				Precast.doPrecast();
 				Pather.useWaypoint(103);
-				return;
 				while (me.ingame) {
 					delay(10000);
 				}			
