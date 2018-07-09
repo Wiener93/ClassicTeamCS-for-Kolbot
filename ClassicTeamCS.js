@@ -10,7 +10,9 @@ function ClassicTeamCS() {
     this.taxi = "";
     this.tpID = 0;
     this.lastCall = 0;
-
+	var leader,
+	leader = Config.Leader;
+	
     this.sealDistance = function (seal) {
         var sealPreset = getPresetUnit(108, 2, seal);
 
@@ -117,8 +119,20 @@ function ClassicTeamCS() {
 
         if (me.area === 107) {
             print("precast");
+			if (Config.ClassicTeamCS.BO) {
+				var pal = getParty(leader);
+				while (pal && pal.area !== 1) {
+					delay(250);
+				}
+				Pather.useWaypoint(103);
+				return;
+				while (me.ingame) {
+					delay(10000);
+				}			
+			}
             this.precast();
 			Precast.doPrecast(true);
+
         } else if (me.area === 108) {
             if (Config.ClassicTeamCS.SealPrecast) {
                 Precast.doPrecast(true);
@@ -448,10 +462,7 @@ function ClassicTeamCS() {
         delay(100);
         this.setTaxi();
         this.doNext();
-		if (Config.ClassicTeamCS.BO && (!me.getState(32))) {
-			return;
-			
-		}
+
         if (getTickCount() - time > 10000) {
             time = getTickCount();
 
