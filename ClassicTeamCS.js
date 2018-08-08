@@ -102,7 +102,7 @@ function ClassicTeamCS() {
         if (this.taxi === "") {
             return;
         }
-
+	delay(250);
         portal = Pather.getPortal(null, this.taxi);
 
         if (!portal || portal.gid === this.tpID) {
