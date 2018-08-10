@@ -463,10 +463,7 @@ function ClassicTeamCS() {
         Pather.useWaypoint(103);
     }
 
-	if (me.classid === 0){
-		print("Repairing Javs");
-		Town.repairJavs();
-	}
+
     Town.doChores();
     Town.move("portalspot");
     var time = getTickCount();
