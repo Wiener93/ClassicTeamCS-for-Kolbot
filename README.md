@@ -33,7 +33,7 @@
 		Config.ClassicTeamCS.BO = false; // true = don't enter seals after boing at river, false = normal character that fights
 		Config.ClassicTeamCS.Ranged = false; // true = ranged character, false = melee character   
 		Config.ClassicTeamCS.PreAttack = [3, 3, 3]; // preattack count at each seal [/vizier/, /seis/, /infector/]  
-    
+    		Config.ClassicTeamCS.doPrecastAtRiver = true; // set to false if char is a barb that isnt supposed to bo
 Set the Diablo killer/ Main Char as leader for all chars ecxapt himself.
 
 Use RAW format to copy& paste
