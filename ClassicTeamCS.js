@@ -102,7 +102,7 @@ function ClassicTeamCS() {
         if (this.taxi === "") {
             return;
         }
-	delay(250);
+		delay(250);
         portal = Pather.getPortal(null, this.taxi);
 
         if (!portal || portal.gid === this.tpID) {
@@ -119,19 +119,23 @@ function ClassicTeamCS() {
 
         if (me.area === 107) {
             print("precast");
+			delay(2000);
 			if (Config.ClassicTeamCS.BO) {
 				var pal = getParty(leader);
 				while (pal && pal.area !== 107) {
 					delay(250);
 				}
 				Precast.doPrecast();
+				Precast.doPrecast();
 				Pather.useWaypoint(103);
 				while (me.ingame) {
 					delay(10000);
 				}			
 			}
-            this.precast();
-			Precast.doPrecast(true);
+			this.precast();
+
+            
+			
 
         } else if (me.area === 108) {
             if (Config.ClassicTeamCS.SealPrecast) {
@@ -167,7 +171,9 @@ function ClassicTeamCS() {
             delay(250);
             
         }
-		Precast.doPrecast(true);
+		if (Config.ClassicTeamCS.doPrecastAtRiver) {
+			Precast.doPrecast(true);
+		}
         if (!Pather.usePortal(null, this.taxi)) {
             Pather.useWaypoint(103);
         }
@@ -457,6 +463,10 @@ function ClassicTeamCS() {
         Pather.useWaypoint(103);
     }
 
+	if (me.classid === 0){
+		print("Repairing Javs");
+		Town.repairJavs();
+	}
     Town.doChores();
     Town.move("portalspot");
     var time = getTickCount();
