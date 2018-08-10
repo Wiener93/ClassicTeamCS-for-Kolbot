@@ -15,7 +15,8 @@
 		Diablo: 0,  
 		BO: false,  
 		Ranged: false,   
-		PreAttack: [0, 0, 0]  
+		PreAttack: [0, 0, 0],
+		doPrecastAtRiver = true;
 		},  
 
 3. Add this in your Sorcs Character Config:
