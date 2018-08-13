@@ -186,7 +186,6 @@ function ClassicTeamCS() {
     };
 
     this.clearOut = function () {
-		Attack.clear(20, 0xF, false, false);
         Pickit.pickItems();
         Pather.usePortal(103, null);
         if (!Pather.usePortal(103, null)) {
@@ -324,9 +323,9 @@ function ClassicTeamCS() {
         var check, player;
 
         switch (me.classid) {
-        case 0:
-        case 1:
-        case 2:
+        case 0: // amazon
+        case 1: // nec
+        case 2: // sorc
             if (me.getState(121)) {
                 player = getUnit(0);
                 if (player) {
@@ -348,9 +347,7 @@ function ClassicTeamCS() {
 
             Skill.cast(Config.AttackSkill[3], 1);
             return true;
-        case 4: // Barbarian 
-            Skill.cast(Config.AttackSkill[3], 1);
-            return true;
+        case 4:
         case 5: // Druid
             if (Config.AttackSkill[3] === 245) {
                 Skill.cast(Config.AttackSkill[3], 0, me.x, me.y);
